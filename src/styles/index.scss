@@ -1,0 +1,16 @@
+@import url("./reset.scss");
+
+*,
+*::before,
+*::after {
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --backgroud: hsl(217.5deg 57.14% 97.25%);
+    --primary: hsl(0deg 0% 100%);
+    --secondary: hsl(228.08deg 71.57% 60%);
+    --black: hsl(223.2deg 16.56% 29.61%);
+    --grey: hsl(0deg 0% 51.76%);
+    --green: hsl(146.04deg 62.35% 50%);
+    --red: hsl(351.37deg 78.49% 63.53%);
+}

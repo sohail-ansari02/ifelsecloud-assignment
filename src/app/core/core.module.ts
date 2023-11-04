@@ -4,6 +4,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
 import { SharedModule } from '../shared/shared.module';
+import { GlobalSearchBarComponent } from './components/global-search-bar/global-search-bar.component';
 
 
 
@@ -11,7 +12,8 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     LayoutComponent,
     HeaderComponent,
-    SideNavigationComponent
+    SideNavigationComponent,
+    GlobalSearchBarComponent
   ],
   imports: [
     CommonModule,
