@@ -3,7 +3,11 @@
 .layout {
     width: 100%;
     height: 100vh;
-
+    overflow: auto;
+    &__navigation,&__outlet{
+        height: 100%;
+    }
+    
     &__navigation {
         background-color: var(--primary);
         width: 4.5rem;
@@ -15,8 +19,6 @@
     }
 
     &__outlet {
-        flex: 1 0 auto;
-        overflow-y: auto;
         margin-inline-start: 4.5rem;
         width: calc(100% - 4.5rem);
 
