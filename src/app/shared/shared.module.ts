@@ -4,13 +4,15 @@ import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SelectComponent } from './components/inputs/select/select.component';
 import { BadgeComponent } from './components/inputs/badge/badge.component';
+import { CardComponent } from './components/card/card.component';
 
 
 
 @NgModule({
   declarations: [
     SelectComponent,
-    BadgeComponent
+    BadgeComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
@@ -21,6 +23,7 @@ import { BadgeComponent } from './components/inputs/badge/badge.component';
     FontAwesomeModule,
     SelectComponent,
     BadgeComponent,
+    CardComponent,
   ]
 })
 export class SharedModule { }

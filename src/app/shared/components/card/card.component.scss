@@ -1,0 +1,17 @@
+@use "functions" as *;
+
+:host {
+  display: block;
+}
+
+.card{
+  padding: toRem(30) toRem(30) toRem(27);
+  background-color: var(--primary);
+  border-radius: 3px;
+  &__title{
+    font-size: toRem(16);
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+}
