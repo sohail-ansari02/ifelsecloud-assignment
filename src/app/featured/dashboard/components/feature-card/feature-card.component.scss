@@ -1,0 +1,55 @@
+@use "functions" as *;
+
+:host {
+  display: block;
+  width: auto;
+ 
+}
+
+.card {
+  padding: toRem(24) toRem(30);
+  display: flex;
+  gap: toRem(16);
+  background-color: var(--primary);
+  width: 100%;
+  justify-content: space-between;
+
+  &__icon {
+    color: var(--light-grey);
+  }
+
+  &__info {
+    &__stats {
+      font-size: toRem(45);
+      color: var(--secondary);
+      line-height: 1;
+      display: inline-block;
+      margin-block-end: toRem(12);
+    }
+
+    &__heading {
+      font-size: toRem(16);
+      font-weight: 500;
+      color: var(--black);
+      margin-block-end: toRem(4);
+    }
+
+    &__sub-heading {
+      font-size: toRem(12);
+      color: var(--grey);
+
+    }
+  }
+
+}
+
+.special {
+  background-color: var(--secondary);
+
+  .card__info__stats,
+  .card__info__heading,
+  .card__info__sub-heading {
+    color: var(--primary);
+  }
+
+}

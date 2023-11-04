@@ -1,0 +1,19 @@
+@use "functions" as *;
+
+:host {
+    display: block;
+}
+
+.dashboard{
+    width: 100%;
+    &__cards{
+        width: 100%;
+        
+        display: grid;
+        gap: toRem(24);
+        grid-template-columns: repeat(auto-fit, minmax(toRem(188), 1fr));
+        &__card{
+            flex-grow: 1;
+        }
+    }
+}
