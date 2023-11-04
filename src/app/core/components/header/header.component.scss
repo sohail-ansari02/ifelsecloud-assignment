@@ -1,6 +1,39 @@
 @use "functions" as *;
 
-.header{
+.header {
     padding: toRem(22) toRem(42);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: toRem(12);
+
+    &__searchbar{
+
+    }
+
+    &__panel{
+        display: flex;
+        gap: toRem(27);
+
+        &__notifications{
+            display: flex;
+            gap: toRem(20);
+        }
+
+        &__profile{
+            display: flex;
+            gap: toRem(13);
+            align-items: center;
+
+            &__image{
+                width: toRem(27);
+                height: auto;
+                aspect-ratio: 1;
+                border-radius: 5px;
+            }
+        }
+    }
+
+
 
 }

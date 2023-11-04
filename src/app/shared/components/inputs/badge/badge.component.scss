@@ -1,0 +1,31 @@
+@use "functions" as *;
+
+:host {
+  display: block;
+}
+
+.badge {
+  position: relative;
+  top: 5px;
+
+  &__dot {
+    position: absolute;
+    width: toRem(5);
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    right: toRem(-5);
+    top: toRem(-5);
+  }
+
+  &__icon {}
+}
+
+.warn {
+  background-color: var(--red);
+
+}
+
+.success {
+  background-color: var(--green);
+}

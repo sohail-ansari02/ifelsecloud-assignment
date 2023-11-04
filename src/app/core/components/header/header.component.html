@@ -1,3 +1,16 @@
 <header class="header">
-    header
+    <app-global-search-bar class="header__searchbar" />
+
+    <div class="header__panel">
+        <app-select [options]="['ENG', 'JP']"></app-select>
+        <div class="header__panel__notifications">
+            <app-badge class="header__panel__notifications__icon" [icon]="faMessage" />
+            <app-badge class="header__panel__notifications__icon" [icon]="faBell" [status]="'warn'" />
+        </div>
+        <div class="header__panel__profile">
+            <img src="/assets/avatar.png" width="27" class="profile__image" alt="profile image" srcset="">
+            <app-select class="profile__select" [options]='["Camille Stevenson", "Sohail Ansari"]' />
+        </div>
+    </div>
+
 </header>
