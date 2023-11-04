@@ -14,6 +14,17 @@
     background-color: initial;
 }
 
-input{
+input {
     color: inherit;
+}
+
+ul,
+ol,
+dl {
+    list-style: none;
+}
+button{
+    all: initial;
+    font-size: inherit;
+    font-family: inherit;
 }

@@ -1,0 +1,35 @@
+@use "functions" as *;
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(20);
+
+    &__toggle-btn {
+        background-color: var(--secondary);
+        color: var(--primary);
+    }
+
+    &__links{
+        display: flex;
+        flex-direction: column;
+        &__link{
+            &__item{
+                color: var(--grey);
+                ::ng-deep{
+                    button{
+                        padding-block: toRem(20);
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
+}
+
+.active-link {
+    color: var(--secondary);
+}

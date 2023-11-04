@@ -1,7 +1,11 @@
 <div class="layout">
-  <app-header />
-  <app-side-navigation></app-side-navigation>
-  <main>
-    <router-outlet />
-  </main>
+
+  <app-side-navigation class="layout__navigation" />
+  <div class="layout__outlet">
+    <app-header class="layout__outlet__header" />
+    <main class="layout__outlet__main">
+      <router-outlet />
+    </main>
+
+  </div>
 </div>

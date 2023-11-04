@@ -1,0 +1,19 @@
+@use "functions" as *;
+
+:host {
+  display: block;
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+.button-base{
+  padding: toRem(27);
+}
+.nav-button{
+  @extend .button-base;
+  background-color: inherit;
+  color: inherit;
+  fa-icon{
+    color: inherit;
+  }
+}
+

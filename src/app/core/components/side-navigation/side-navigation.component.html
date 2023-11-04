@@ -1,1 +1,20 @@
-<p>side-navigation works!</p>
+<nav class="nav">
+    <app-nav-button class="nav__toggle-btn" [icon]="ICON.faBars" />
+
+    <ul class="nav__links">
+        <li class="nav__links__link">
+            <app-nav-button routerLink="non" routerLinkActive="active-link" class="nav__links__link__item"
+                [icon]="ICON.faCube" />
+            <app-nav-button routerLink="non" routerLinkActive="active-link" class="nav__links__link__item"
+                [icon]="ICON.faBarChart" />
+            <app-nav-button routerLink="dashboard" routerLinkActive="active-link" class="nav__links__link__item"
+                [icon]="ICON.faSquarePlus" />
+            <app-nav-button routerLink="non" routerLinkActive="active-link" class="nav__links__link__item"
+                [icon]="ICON.faCheck" />
+            <app-nav-button routerLink="non" routerLinkActive="active-link" class="nav__links__link__item"
+                [icon]="ICON.faGear" />
+            <app-nav-button routerLink="non" routerLinkActive="active-link" class="nav__links__link__item"
+                [icon]="ICON.faDownload" />
+        </li>
+    </ul>
+</nav>

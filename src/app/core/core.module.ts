@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
 import { SharedModule } from '../shared/shared.module';
 import { GlobalSearchBarComponent } from './components/global-search-bar/global-search-bar.component';
+import { NavButtonComponent } from './components/nav-button/nav-button.component';
 
 
 
@@ -13,7 +14,8 @@ import { GlobalSearchBarComponent } from './components/global-search-bar/global-
     LayoutComponent,
     HeaderComponent,
     SideNavigationComponent,
-    GlobalSearchBarComponent
+    GlobalSearchBarComponent,
+    NavButtonComponent
   ],
   imports: [
     CommonModule,
