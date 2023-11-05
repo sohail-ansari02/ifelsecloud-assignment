@@ -27,15 +27,22 @@
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         gap: $gap;
-
+        
         &__recent-order {
             grid-column: span 8;
         }
-
+        
         &__new-users {
             grid-column: span 4;
-
+            
         }
+
+    }
+
+    &__charts{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: $gap;
 
     }
 }
