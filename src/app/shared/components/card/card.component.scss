@@ -2,12 +2,14 @@
 
 :host {
   display: block;
+  background-color: var(--primary);
+  
 }
 
 .card{
   padding: toRem(30) toRem(30) toRem(27);
-  background-color: var(--primary);
   border-radius: 3px;
+  background-color: inherit;
   &__title{
     font-size: toRem(16);
     font-weight: 600;

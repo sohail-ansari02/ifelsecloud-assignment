@@ -7,10 +7,9 @@
 }
 
 .card {
-  padding: toRem(24) toRem(30);
+  // padding: toRem(24) toRem(30);
   display: flex;
   gap: toRem(16);
-  background-color: var(--primary);
   width: 100%;
   justify-content: space-between;
   border-radius: 3px;

@@ -1,11 +1,12 @@
-<article [ngClass]="{
-    'card' : true,
-    special: special
+<app-card [ngClass]="{
+    special : special,
 }">
-    <div class="card__info">
-        <span class="card__info__stats">40%</span>
-        <h2 class="card__info__heading">Saving for home plane</h2>
-        <p class="card__info__sub-heading">Lorem ipsum dolor sit amet.</p>
-    </div>
-    <fa-icon class="card__icon" [icon]="faMusic" [size]="'2x'"></fa-icon>
-</article>
+    <article class="card">
+        <div class="card__info">
+            <span class="card__info__stats">40%</span>
+            <h2 class="card__info__heading">Saving for home plane</h2>
+            <p class="card__info__sub-heading">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <fa-icon class="card__icon" [icon]="faMusic" [size]="'2x'"></fa-icon>
+    </article>
+</app-card>
