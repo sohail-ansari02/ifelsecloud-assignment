@@ -18,17 +18,30 @@
     @extend .border;
     padding-block: toRem(10);
     color: var(--grey);
+    min-width: toRem(30);
   }
 
   & thead {
     position: sticky;
     top: 0;
     background-color: var(--primary);
+
     td {
       font-weight: 600;
       color: var(--black);
+      text-transform: capitalize;
+
+      &:first-child {
+        text-align: center;
+      }
     }
 
+  }
+
+  & tbody>tr>td:first-child {
+    font-weight: 600;
+    color: var(--black);
+    text-align: center;
   }
 
 }

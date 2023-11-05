@@ -18,6 +18,7 @@ export class TableBodyDirective {
 export class TableComponent implements AfterContentInit {
   @Input() columns: any[] = [];
   @Input() data: any[] = [];
+  @Input() showIndex: boolean = false;
   @ContentChild(TableHeaderDirective) public header!: TableHeaderDirective;
   @ContentChild(TableBodyDirective) public body!: TableBodyDirective;
   

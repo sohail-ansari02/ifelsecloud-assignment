@@ -1,13 +1,13 @@
 <table class="table">
         <thead>
             <tr>
-                <td>#</td>
+                <td *ngIf="showIndex" >#</td>
                 <ng-container *ngTemplateOutlet="header.template; context: { $implicit: columns}"></ng-container>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let row of data; index as i">
-                <td>{{i}}</td>
+                <td *ngIf="showIndex" >{{i}}</td>
                 <ng-container *ngTemplateOutlet="body.template; context: { $implicit: row }">
                 </ng-container>
             </tr>

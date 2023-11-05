@@ -1,3 +1,29 @@
 :host {
   display: block;
 }
+
+.detail-btn {
+  background-color: transparent;
+  color: var(--grey);
+}
+.chip{
+  color: var(--primary);
+}
+.Pending {
+  @extend .chip;
+  background-color: var(--grey);
+}
+
+.Paid {
+  @extend .chip;
+  background-color: var(--green);
+}
+
+.Failed {
+  @extend .chip;
+  background-color: var(--red);
+
+}
+
+.recent-order{
+}

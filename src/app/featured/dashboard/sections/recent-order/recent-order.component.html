@@ -1,13 +1,38 @@
-<app-card class="dashboard__tables__recent-order" title="recent order">
-    <app-table [columns]="columns" [data]="data">
+<app-card class="recent-order" title="recent order">
+    <app-table [columns]="columns" [data]="recentOrder" [showIndex]="true">
         <ng-template tableHeader let-columns>
             <td *ngFor="let col of columns">
-                {{ col }}
+                {{ col.name }}
             </td>
         </ng-template>
         <ng-template tableBody let-data>
-            <td class="row" *ngFor="let col of columns">
-                {{data[col]}}
+            <td class="row" *ngFor="let col of columns; let last = last">
+                <ng-container *ngIf="!last; else dialogBtn;">
+                    <ng-container [ngSwitch]="col.field">
+                        <ng-container *ngSwitchCase="'status'">
+                            <app-chip [class]="data[ col.field]">
+                                {{data[ col.field] }}
+                            </app-chip>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'delivery_date'">
+                               {{data[ col.field] | date: 'dd MMM, y'}}
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'tracking_no'">
+                               #{{data[ col.field] }}
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'shipping'">
+                               {{data[ col.field] ? 'Yes' : 'No' }}
+                        </ng-container>
+                        <ng-container *ngSwitchDefault>
+                            {{data[ col.field] }}
+                        </ng-container>
+                    </ng-container>
+                </ng-container>
+                <ng-template #dialogBtn>
+                    <app-button class="detail-btn">
+                        <fa-icon [icon]="faX"></fa-icon>
+                    </app-button>
+                </ng-template>
             </td>
         </ng-template>
     </app-table>

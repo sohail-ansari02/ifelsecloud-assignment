@@ -1,5 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { RecentOrder } from '../../interfaces/recent-order';
+import { TableColumn } from 'src/app/shared/interface/table-column';
+import { faX } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-recent-order',
   templateUrl: './recent-order.component.html',
@@ -7,21 +9,38 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RecentOrderComponent {
-
-  columns = ['Name', 'Age', 'Country'];
-  data = [
-    { Name: 'John', Age: 30, Country: 'USA' },
-    { Name: 'Alice', Age: 25, Country: 'Canada' },
-    { Name: 'Bob', Age: 35, Country: 'UK' },
-    { Name: 'John', Age: 30, Country: 'USA' },
-    { Name: 'Alice', Age: 25, Country: 'Canada' },
-    { Name: 'Bob', Age: 35, Country: 'UK' },
-    { Name: 'John', Age: 30, Country: 'USA' },
-    { Name: 'Alice', Age: 25, Country: 'Canada' },
-    { Name: 'Bob', Age: 35, Country: 'UK' },
-    { Name: 'John', Age: 30, Country: 'USA' },
-    { Name: 'Alice', Age: 25, Country: 'Canada' },
-    { Name: 'Bob', Age: 35, Country: 'UK' },
-  ];
+  @Input() recentOrder: RecentOrder[] = [];
+  faX = faX;
+  
+  columns: TableColumn[] = [
+    {
+      name: 'customer',
+      field: 'name'
+    },
+    {
+      name: 'product',
+      field: 'name'
+    },
+    {
+      name: 'delivery date',
+      field: 'delivery_date'
+    },
+    {
+      name: 'status',
+      field: 'status'
+    },
+    {
+      name: 'tracking no#',
+      field: 'tracking_no'
+    },
+    {
+      name: 'shipping',
+      field: 'shipping'
+    },
+    {
+      name: '',
+      field: ''
+    }
+  ]
 
 }
