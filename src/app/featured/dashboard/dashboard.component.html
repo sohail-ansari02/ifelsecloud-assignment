@@ -1,8 +1,8 @@
 <section class="dashboard">
-   
 
-   
-     <div class="dashboard__cards">
+
+
+    <div class="dashboard__cards">
         <app-feature-card [special]="true" class="dashboard__cards__card"></app-feature-card>
         <app-feature-card class="dashboard__cards__card"></app-feature-card>
         <app-feature-card class="dashboard__cards__card"></app-feature-card>
@@ -23,7 +23,7 @@
                 </ng-template>
             </app-table>
         </app-card>
-        <app-card title="recent order" class="dashboard__tables__new-users">
+        <app-card title="New User Registrations" class="dashboard__tables__new-users">
             <app-table [columns]="columns" [data]="data">
                 <ng-template tableHeader let-columns>
                     <td *ngFor="let col of columns">
@@ -37,5 +37,15 @@
                 </ng-template>
             </app-table>
         </app-card>
+    </div>
+    <div class="dashboard__charts">
+        <app-card class="dashboard__charts__sales" title="sales statistics">
+        </app-card>
+        <app-card class="dashboard__charts__balance" title="balance overview">
+        </app-card>
+        <app-card class="dashboard__charts__products" title="top products">
+        </app-card>
+
+
     </div>
 </section>
