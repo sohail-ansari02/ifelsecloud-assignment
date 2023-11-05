@@ -2,11 +2,12 @@
 
 :host {
   display: block;
+  min-width: toRem(100);
 }
 
 .progress {
   width: 100%;
-  display: flex;
+  display: inline flex;
   align-items: center;
   gap: toRem(5);
   &__bar {
@@ -33,5 +34,5 @@
  background-color: var(--green);
 }
 .five{
- background-color: var(--primary);
+ background-color: var(--secondary);
 }

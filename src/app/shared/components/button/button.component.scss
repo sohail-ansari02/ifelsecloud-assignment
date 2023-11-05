@@ -18,3 +18,7 @@
   cursor: pointer;
 
 }
+button.disabled{
+  color: var(--grey);
+  background-color: var(--light-grey);
+}

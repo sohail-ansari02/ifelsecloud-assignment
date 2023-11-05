@@ -38,7 +38,7 @@ export class RecentOrderComponent {
       field: 'shipping'
     },
     {
-      name: '',
+      name: 'action',
       field: ''
     }
   ]

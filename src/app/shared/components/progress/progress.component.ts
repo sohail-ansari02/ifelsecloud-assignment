@@ -5,6 +5,15 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   templateUrl: './progress.component.html',
   styleUrls: ['./progress.component.scss'],
 })
-export class ProgressComponent  {
-  @Input() value: number = 0;
+export class ProgressComponent implements OnInit {
+  @Input(
+    {
+      transform: (value: number | string) => parseInt(<string>value)*0.01
+    }
+  ) value: number = 0;
+
+  ngOnInit(): void {
+    console.log('vaas', this.value);
+    
+  }
 }

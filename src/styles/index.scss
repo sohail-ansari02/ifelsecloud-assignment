@@ -19,7 +19,7 @@
     --yellow: hsl(62, 92%, 50%);
     --red: hsl(351.37deg 78.49% 63.53%);
     --grey: hsl(0, 0%, 39%);
-    --light-grey: hsl(220, 7%, 76%);
+    --light-grey: hsl(0, 0%, 84%);
 }
 
 input::placeholder {
@@ -32,4 +32,24 @@ fa-icon {
 body{
     background-color: var(--backgroud);
     overflow: hidden;
+}
+
+
+*::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+*::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+}
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+*::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.9);
 }

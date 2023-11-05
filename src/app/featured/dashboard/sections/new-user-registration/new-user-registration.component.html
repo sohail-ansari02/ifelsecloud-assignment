@@ -1,14 +1,41 @@
-
-<app-card title="New User Registrations" >
-    <app-table [columns]="columns" [data]="data">
-        <ng-template tableHeader let-columns>
+<app-card title="New User Registrations">
+    <app-table [columns]="columns" [data]="newUsers">
+        <!-- <ng-template tableHeader let-columns>
             <td *ngFor="let col of columns">
-                {{ col }}
+                {{ col.name }}
             </td>
-        </ng-template>
+        </ng-template> -->
         <ng-template tableBody let-data>
-            <td class="row" *ngFor="let col of columns">
-                {{data[col]}}
+            <td class="row" *ngFor="let col of columns; let last = last">
+                <ng-container>
+                    <ng-container [ngSwitch]="col.name">
+                        <ng-container *ngSwitchCase="'user'">
+                            <div class="profile">
+                                <picture class="profile__picture">
+                                    <img src="{{data.picture}}" alt="{{data.name}}" class="profile__picture__image">
+                                    <div class="profile__picture__image"></div>
+                                </picture>
+                                <div class="profile__info">
+                                    <span class="profile__info__name">
+                                        {{data.name}}
+                                    </span>
+                                    <span class="profile__info__location">
+                                        {{data.country}}
+                                    </span>
+                                </div>
+                            </div>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'progress'">
+                            <app-progress [value]="data[col.field]"></app-progress>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'action'">
+                            <app-button class="detail-btn">
+                                More
+                            </app-button>
+                        </ng-container>
+                    </ng-container>
+                </ng-container>
+
             </td>
         </ng-template>
     </app-table>

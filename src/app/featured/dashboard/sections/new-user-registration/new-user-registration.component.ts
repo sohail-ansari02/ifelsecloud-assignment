@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { TableColumn } from 'src/app/shared/interface/table-column';
+import { NewUser } from '../../interfaces/new-user';
 
 @Component({
   selector: 'app-new-user-registration',
@@ -7,21 +9,20 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NewUserRegistrationComponent {
-  ;
-  columns = ['Name', 'Age', 'Country'];
-  data = [
-    { Name: 'John', Age: 30, Country: 'USA' },
-    { Name: 'Alice', Age: 25, Country: 'Canada' },
-    { Name: 'Bob', Age: 35, Country: 'UK' },
-    { Name: 'John', Age: 30, Country: 'USA' },
-    { Name: 'Alice', Age: 25, Country: 'Canada' },
-    { Name: 'Bob', Age: 35, Country: 'UK' },
-    { Name: 'John', Age: 30, Country: 'USA' },
-    { Name: 'Alice', Age: 25, Country: 'Canada' },
-    { Name: 'Bob', Age: 35, Country: 'UK' },
-    { Name: 'John', Age: 30, Country: 'USA' },
-    { Name: 'Alice', Age: 25, Country: 'Canada' },
-    { Name: 'Bob', Age: 35, Country: 'UK' },
+  @Input() newUsers: NewUser[] = []
+  columns: TableColumn[] = [
+    {
+      name: 'user',
+      field: ''
+    },
+    {
+      name: 'progress',
+      field: 'progress'
+    },
+    {
+      name: 'action',
+      field: ''
+    },
   ];
 
 }
