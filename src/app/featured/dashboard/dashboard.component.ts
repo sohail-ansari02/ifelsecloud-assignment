@@ -45,7 +45,6 @@ export class DashboardComponent implements OnInit, OnDestroy {
       takeUntil(this._onDestroy)
     )
       .subscribe(res => {
-
         res.top_cards = (res?.top_cards ?? []).map((card, _index) => {
           return {
             ...card,

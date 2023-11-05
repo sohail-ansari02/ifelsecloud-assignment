@@ -13,12 +13,14 @@
 
 :host ::ng-deep .table {
   width: 100%;
+  table-layout: auto;
 
   td {
     @extend .border;
     padding-block: toRem(10);
     color: var(--grey);
     min-width: toRem(30);
+    width: fit-content;
   }
 
   & thead {
@@ -28,11 +30,13 @@
 
     td {
       font-weight: 600;
-      color: var(--black);
+      color: var(--dark-grey);
       text-transform: capitalize;
+      border-top: 1px solid var(--light-grey);
 
       &:first-child {
         text-align: center;
+        color: var(--dark-grey);
       }
     }
 
@@ -40,7 +44,7 @@
 
   & tbody>tr>td:first-child {
     font-weight: 600;
-    color: var(--black);
+    color: var(--dark-grey);
     text-align: center;
   }
 

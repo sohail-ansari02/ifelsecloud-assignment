@@ -1,3 +1,4 @@
+<app-dialouge></app-dialouge>
 <section class="dashboard">
     <div *ngIf="dashboardData?.top_cards" class="dashboard__cards">
         <app-feature-card *ngFor="let card of dashboardData.top_cards; let first = first" [data]="card"

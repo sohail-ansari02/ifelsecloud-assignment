@@ -1,42 +1,47 @@
 <app-card class="recent-order" title="recent order">
     <app-table [columns]="columns" [data]="recentOrder" [showIndex]="true">
         <ng-template tableHeader let-columns>
-            <td *ngFor="let col of columns">
-                {{ col.name }}
-            </td>
+            <ng-container *ngFor="let col of columns">
+                <td [align]="col?.align ?? 'left'">
+                    {{ col.name }}
+                </td>
+
+            </ng-container>
         </ng-template>
         <ng-template tableBody let-data>
-            <td class="row" *ngFor="let col of columns; let last = last">
-                <ng-container>
-                    <ng-container [ngSwitch]="col.name">
-                        <ng-container *ngSwitchCase="'status'">
-                            <div class="chip__wrapper">
-                                <app-chip [class]="data[ col.field]">
-                                    {{data[ col.field] }}
-                                </app-chip>
-                            </div>
-                        </ng-container>
-                        <ng-container *ngSwitchCase="'delivery date'">
-                            {{data[ col.field] | date: 'dd MMM, y'}}
-                        </ng-container>
-                        <ng-container *ngSwitchCase="'tracking no#'">
-                            #{{data[ col.field] }}
-                        </ng-container>
-                        <ng-container *ngSwitchCase="'shipping'">
-                            {{data[ col.field] ? 'Yes' : 'No' }}
-                        </ng-container>
-                        <ng-container *ngSwitchCase="'action'">
-                            <app-button class="detail-btn">
-                                <fa-icon [icon]="faX"></fa-icon>
-                            </app-button>
-                        </ng-container>
-                        <ng-container *ngSwitchDefault>
-                            {{data[ col.field] }}
+            <ng-container *ngFor="let col of columns; let last = last">
+                <td class="row"  [align]="col?.align ?? 'left'">
+                    <ng-container>
+                        <ng-container [ngSwitch]="col.name">
+                            <ng-container *ngSwitchCase="'status'">
+                                <div class="chip__wrapper">
+                                    <app-chip [class]="data[ col.field]">
+                                        {{data[ col.field] }}
+                                    </app-chip>
+                                </div>
+                            </ng-container>
+                            <ng-container *ngSwitchCase="'delivery date'">
+                                {{data[ col.field] | date: 'dd MMM, y'}}
+                            </ng-container>
+                            <ng-container *ngSwitchCase="'tracking no#'">
+                                #{{data[ col.field] }}
+                            </ng-container>
+                            <ng-container *ngSwitchCase="'shipping'">
+                                {{data[ col.field] ? 'Yes' : 'No' }}
+                            </ng-container>
+                            <ng-container *ngSwitchCase="'action'">
+                                <app-button class="detail-btn">
+                                    <fa-icon [icon]="faX"></fa-icon>
+                                </app-button>
+                            </ng-container>
+                            <ng-container *ngSwitchDefault>
+                                {{data[ col.field] }}
+                            </ng-container>
                         </ng-container>
                     </ng-container>
-                </ng-container>
 
-            </td>
+                </td>
+            </ng-container>
         </ng-template>
     </app-table>
 </app-card>

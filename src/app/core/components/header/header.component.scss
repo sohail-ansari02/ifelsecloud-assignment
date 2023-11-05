@@ -19,6 +19,9 @@
         &__notifications{
             display: flex;
             gap: toRem(20);
+            &__icon{
+                cursor: pointer;
+            }
         }
 
         &__profile{

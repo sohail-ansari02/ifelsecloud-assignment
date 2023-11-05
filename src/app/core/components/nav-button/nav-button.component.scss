@@ -7,6 +7,8 @@
 }
 .button-base{
   padding: toRem(27);
+  cursor: pointer;
+
 }
 .nav-button{
   @extend .button-base;

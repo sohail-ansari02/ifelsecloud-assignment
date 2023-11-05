@@ -27,15 +27,18 @@ export class RecentOrderComponent {
     },
     {
       name: 'status',
-      field: 'status'
+      field: 'status',
+      align: 'center',
     },
     {
       name: 'tracking no#',
-      field: 'tracking_no'
+      field: 'tracking_no',
+      align: 'center',
     },
     {
       name: 'shipping',
-      field: 'shipping'
+      field: 'shipping',
+      align: 'center',
     },
     {
       name: 'action',

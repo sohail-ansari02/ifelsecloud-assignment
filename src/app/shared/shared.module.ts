@@ -10,7 +10,8 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { ChipComponent } from './components/chip/chip.component';
 import { ButtonComponent } from './components/button/button.component';
 import { ProgressComponent } from './components/progress/progress.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { DialougeComponent } from './components/dialouge/dialouge.component'
 
 
 
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http'
     ChipComponent,
     ButtonComponent,
     ProgressComponent,
+    DialougeComponent,
   ],
   imports: [
     CommonModule,
@@ -42,7 +44,8 @@ import { HttpClientModule } from '@angular/common/http'
     NgApexchartsModule,
     ChipComponent,
     ButtonComponent,
-    ProgressComponent
+    ProgressComponent,
+    DialougeComponent
   ]
 })
 export class SharedModule { }

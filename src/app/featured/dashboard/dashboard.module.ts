@@ -7,6 +7,7 @@ import { FeatureCardComponent } from './components/feature-card/feature-card.com
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RecentOrderComponent } from './sections/recent-order/recent-order.component';
 import { NewUserRegistrationComponent } from './sections/new-user-registration/new-user-registration.component';
+import { DashboardService } from './services/dashboard.service';
 
 
 @NgModule({
@@ -20,6 +21,9 @@ import { NewUserRegistrationComponent } from './sections/new-user-registration/n
     CommonModule,
     DashboardRoutingModule,
     SharedModule,
+  ],
+  providers: [
+    DashboardService
   ]
 })
 export class DashboardModule { }

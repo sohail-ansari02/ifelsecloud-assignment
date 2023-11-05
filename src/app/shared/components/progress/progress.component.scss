@@ -2,7 +2,9 @@
 
 :host {
   display: block;
-  min-width: toRem(100);
+  min-width: toRem(126);
+  max-width: toRem(295);
+  width: 100%;
 }
 
 .progress {
