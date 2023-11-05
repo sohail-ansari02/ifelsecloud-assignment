@@ -41,10 +41,12 @@
     <div class="dashboard__charts">
         <app-card class="dashboard__charts__sales" >
             <apx-chart
-            [series]="chartOptions.series"
-            [chart]="chartOptions.chart"
-            [xaxis]="chartOptions.xaxis"
-            [title]="chartOptions.title"
+            [series]="CHARTS_OPTION.salesChart.series"
+            [chart]="CHARTS_OPTION.salesChart.chart"
+            [xaxis]="CHARTS_OPTION.salesChart.xaxis"
+            [title]="CHARTS_OPTION.salesChart.title"
+            [yaxis]="CHARTS_OPTION.salesChart.yaxis"
+            [stroke]="CHARTS_OPTION.salesChart.stroke"
           ></apx-chart>        </app-card>
         <app-card class="dashboard__charts__balance" title="balance overview">
         </app-card>

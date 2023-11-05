@@ -21,10 +21,12 @@
     &__outlet {
         margin-inline-start: 4.5rem;
         width: calc(100% - 4.5rem);
+        height: auto;
 
         &__header{
             position: sticky;
             top: 0;
+            z-index: 99;
         }
 
         &__main {
