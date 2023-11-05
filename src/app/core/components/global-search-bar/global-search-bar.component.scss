@@ -9,6 +9,7 @@
   align-items: center;
   color: var(--grey);
   &__icon{
+    cursor: pointer;
   }
   &__input{
     font-size: toRem(16);
