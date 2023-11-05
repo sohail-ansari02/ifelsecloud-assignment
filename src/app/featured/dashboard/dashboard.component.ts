@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import {salesChart} from "./chartsData"
+import { balanceChart, donucChart, salesChart } from "./chartsData"
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -27,11 +27,12 @@ export class DashboardComponent {
     { Name: 'Bob', Age: 35, Country: 'UK' },
   ];
   CHARTS_OPTION: any = {
-    salesChart
+    salesChart,
+    balanceChart, donucChart
   }
-  constructor(){
+  constructor() {
     console.log('ads', this.CHARTS_OPTION);
-    
+
   }
 
 }

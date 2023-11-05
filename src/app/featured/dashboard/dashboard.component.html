@@ -39,18 +39,24 @@
         </app-card>
     </div>
     <div class="dashboard__charts">
-        <app-card class="dashboard__charts__sales" >
-            <apx-chart
-            [series]="CHARTS_OPTION.salesChart.series"
-            [chart]="CHARTS_OPTION.salesChart.chart"
-            [xaxis]="CHARTS_OPTION.salesChart.xaxis"
-            [title]="CHARTS_OPTION.salesChart.title"
-            [yaxis]="CHARTS_OPTION.salesChart.yaxis"
-            [stroke]="CHARTS_OPTION.salesChart.stroke"
-          ></apx-chart>        </app-card>
-        <app-card class="dashboard__charts__balance" title="balance overview">
+        <app-card class="dashboard__charts__sales">
+            <apx-chart [series]="CHARTS_OPTION.salesChart.series" [chart]="CHARTS_OPTION.salesChart.chart"
+                [xaxis]="CHARTS_OPTION.salesChart.xaxis" [title]="CHARTS_OPTION.salesChart.title"
+                [yaxis]="CHARTS_OPTION.salesChart.yaxis" [stroke]="CHARTS_OPTION.salesChart.stroke"></apx-chart>
         </app-card>
-        <app-card class="dashboard__charts__products" title="top products">
+        <app-card class="dashboard__charts__balance">
+            <apx-chart [series]="CHARTS_OPTION.balanceChart.series" [chart]="CHARTS_OPTION.balanceChart.chart"
+                [plotOptions]="CHARTS_OPTION.plotOptions" [xaxis]="CHARTS_OPTION.balanceChart.xaxis"
+                [title]="CHARTS_OPTION.balanceChart.title" [yaxis]="CHARTS_OPTION.balanceChart.yaxis"
+                [stroke]="CHARTS_OPTION.balanceChart.stroke" [legend]="CHARTS_OPTION.balanceChart.legend"></apx-chart>
+        </app-card>
+        <app-card class="dashboard__charts__products">
+            <apx-chart [series]="CHARTS_OPTION.donucChart.series" [chart]="CHARTS_OPTION.donucChart.chart"
+                [labels]="CHARTS_OPTION.donucChart.labels" [responsive]="CHARTS_OPTION.donucChart.responsive"
+                [legend]="CHARTS_OPTION.donucChart.legend" [plotOptions]="CHARTS_OPTION.donucChart.plotOptions"
+                [fill]="CHARTS_OPTION.donucChart.fill" [tooltip]="CHARTS_OPTION.donucChart.tooltip"
+                [title]="CHARTS_OPTION.donucChart.title"
+                ></apx-chart>
         </app-card>
 
 
