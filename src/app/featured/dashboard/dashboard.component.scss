@@ -44,10 +44,6 @@
         grid-template-columns: repeat(11, 1fr);
         gap: $gap;
 
-        &>* {
-            padding-block-start: toRem(11);
-        }
-
         &__sales,
         &__balance {
             grid-column: span 4;
