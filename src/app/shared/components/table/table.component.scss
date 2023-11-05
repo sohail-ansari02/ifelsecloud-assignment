@@ -1,0 +1,23 @@
+@use "functions" as *;
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.border {
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.table {
+  width: inherit;
+  td {
+    @extend .border;
+    padding-block: toRem(10);
+  }
+  
+  & thead td {
+    font-weight: 600;
+  }
+
+}

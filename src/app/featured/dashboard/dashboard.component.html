@@ -1,9 +1,27 @@
- <section class="dashboard">
-    <div class="dashboard__cards">
+<section class="dashboard">
+    <!-- <div class="dashboard__cards">
         <app-feature-card [special]="true" class="dashboard__cards__card"></app-feature-card>
         <app-feature-card class="dashboard__cards__card"></app-feature-card>
         <app-feature-card class="dashboard__cards__card"></app-feature-card>
         <app-feature-card class="dashboard__cards__card"></app-feature-card>
-    </div>
-    <app-card title="recent order"></app-card>
+    </div> -->
+
+    <app-card title="recent order">
+        <app-table [columns]="columns" [data]="data">
+            <ng-template tableHeader let-columns>
+                <tr class="column" *ngFor="let col of columns">
+                    <td>
+                        {{ col.colName }}
+                    </td>
+                </tr>
+            </ng-template>x
+            <ng-template tableBody let-data>
+                <tr class="row" *ngFor="let col of data.columns">
+                    <td>
+                        {{ data.rowData[col.fieldName] }}
+                    </td>
+                </tr>
+            </ng-template>
+        </app-table>
+    </app-card>
 </section>
