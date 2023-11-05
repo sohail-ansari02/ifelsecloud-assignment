@@ -1,0 +1,15 @@
+
+<app-card title="New User Registrations" >
+    <app-table [columns]="columns" [data]="data">
+        <ng-template tableHeader let-columns>
+            <td *ngFor="let col of columns">
+                {{ col }}
+            </td>
+        </ng-template>
+        <ng-template tableBody let-data>
+            <td class="row" *ngFor="let col of columns">
+                {{data[col]}}
+            </td>
+        </ng-template>
+    </app-table>
+</app-card>

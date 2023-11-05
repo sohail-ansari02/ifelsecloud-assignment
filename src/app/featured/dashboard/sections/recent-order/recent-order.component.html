@@ -1,0 +1,14 @@
+<app-card class="dashboard__tables__recent-order" title="recent order">
+    <app-table [columns]="columns" [data]="data">
+        <ng-template tableHeader let-columns>
+            <td *ngFor="let col of columns">
+                {{ col }}
+            </td>
+        </ng-template>
+        <ng-template tableBody let-data>
+            <td class="row" *ngFor="let col of columns">
+                {{data[col]}}
+            </td>
+        </ng-template>
+    </app-table>
+</app-card>

@@ -4,7 +4,7 @@
 <app-button>
     button
 </app-button>
-<app-progress ></app-progress>
+<app-progress></app-progress>
 <section class="dashboard">
 
 
@@ -16,34 +16,8 @@
         <app-feature-card class="dashboard__cards__card"></app-feature-card>
     </div>
     <div class="dashboard__tables">
-        <app-card class="dashboard__tables__recent-order" title="recent order">
-            <app-table [columns]="columns" [data]="data">
-                <ng-template tableHeader let-columns>
-                    <td *ngFor="let col of columns">
-                        {{ col }}
-                    </td>
-                </ng-template>
-                <ng-template tableBody let-data>
-                    <td class="row" *ngFor="let col of columns">
-                        {{data[col]}}
-                    </td>
-                </ng-template>
-            </app-table>
-        </app-card>
-        <app-card title="New User Registrations" class="dashboard__tables__new-users">
-            <app-table [columns]="columns" [data]="data">
-                <ng-template tableHeader let-columns>
-                    <td *ngFor="let col of columns">
-                        {{ col }}
-                    </td>
-                </ng-template>
-                <ng-template tableBody let-data>
-                    <td class="row" *ngFor="let col of columns">
-                        {{data[col]}}
-                    </td>
-                </ng-template>
-            </app-table>
-        </app-card>
+        <app-recent-order class="dashboard__tables__recent-order" />
+        <app-new-user-registration class="dashboard__tables__new-users" />
     </div>
     <div class="dashboard__charts">
         <app-card class="dashboard__charts__sales">
@@ -57,16 +31,14 @@
                 [title]="CHARTS_OPTION.balanceChart.title" [yaxis]="CHARTS_OPTION.balanceChart.yaxis"
                 [stroke]="CHARTS_OPTION.balanceChart.stroke" [legend]="CHARTS_OPTION.balanceChart.legend"
                 [yaxis]="CHARTS_OPTION.balanceChart.yaxis"
-                [dataLabels]="CHARTS_OPTION.balanceChart.dataLabels"
-                ></apx-chart>
+                [dataLabels]="CHARTS_OPTION.balanceChart.dataLabels"></apx-chart>
         </app-card>
         <app-card class="dashboard__charts__products">
             <apx-chart [series]="CHARTS_OPTION.donucChart.series" [chart]="CHARTS_OPTION.donucChart.chart"
                 [labels]="CHARTS_OPTION.donucChart.labels" [responsive]="CHARTS_OPTION.donucChart.responsive"
                 [legend]="CHARTS_OPTION.donucChart.legend" [plotOptions]="CHARTS_OPTION.donucChart.plotOptions"
                 [fill]="CHARTS_OPTION.donucChart.fill" [tooltip]="CHARTS_OPTION.donucChart.tooltip"
-                [title]="CHARTS_OPTION.donucChart.title"
-                ></apx-chart>
+                [title]="CHARTS_OPTION.donucChart.title"></apx-chart>
         </app-card>
 
 

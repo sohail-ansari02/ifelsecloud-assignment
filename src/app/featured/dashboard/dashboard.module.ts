@@ -5,12 +5,16 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { FeatureCardComponent } from './components/feature-card/feature-card.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { RecentOrderComponent } from './sections/recent-order/recent-order.component';
+import { NewUserRegistrationComponent } from './sections/new-user-registration/new-user-registration.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    FeatureCardComponent
+    FeatureCardComponent,
+    RecentOrderComponent,
+    NewUserRegistrationComponent
   ],
   imports: [
     CommonModule,
