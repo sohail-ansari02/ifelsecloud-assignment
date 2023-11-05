@@ -2,7 +2,7 @@
 
 :host {
   display: block;
-  width: 100%;
+  width: auto;
 }
 
 .border {
@@ -10,7 +10,7 @@
 }
 
 :host ::ng-deep .table {
-  width: inherit;
+  width: 100%;
   td {
     @extend .border;
     padding-block: toRem(10);

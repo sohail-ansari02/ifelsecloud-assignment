@@ -4,19 +4,38 @@
     display: block;
 }
 
-.dashboard{
+.dashboard {
+    $gap: toRem(24);
     width: 100%;
-    display: flex;
+    // display: flex;
     flex-direction: column;
     gap: toRem(26);
-    &__cards{
+
+    &__cards {
         width: 100%;
-        
+
         display: grid;
-        gap: toRem(24);
+        gap: $gap;
         grid-template-columns: repeat(auto-fit, minmax(toRem(188), 1fr));
-        &__card{
+
+        &__card {
             flex-grow: 1;
         }
+    }
+
+    &__tables {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: $gap;
+
+        &__recent-order {
+            grid-column: span 8;
+        }
+
+        &__new-users {
+            grid-column: span 4;
+
+        }
+
     }
 }

@@ -1,24 +1,41 @@
 <section class="dashboard">
    
 
-    <app-card title="recent order">
-        <app-table [columns]="columns" [data]="data">
-            <ng-template tableHeader let-columns>
-                <td *ngFor="let col of columns">
-                    {{ col }}
-                </td>
-            </ng-template>
-            <ng-template tableBody let-data>
-                <td class="row" *ngFor="let col of columns">
-                    {{data[col]}}
-                </td>
-            </ng-template>
-        </app-table>
-    </app-card>
+   
      <div class="dashboard__cards">
         <app-feature-card [special]="true" class="dashboard__cards__card"></app-feature-card>
         <app-feature-card class="dashboard__cards__card"></app-feature-card>
         <app-feature-card class="dashboard__cards__card"></app-feature-card>
         <app-feature-card class="dashboard__cards__card"></app-feature-card>
+    </div>
+    <div class="dashboard__tables">
+        <app-card class="dashboard__tables__recent-order" title="recent order">
+            <app-table [columns]="columns" [data]="data">
+                <ng-template tableHeader let-columns>
+                    <td *ngFor="let col of columns">
+                        {{ col }}
+                    </td>
+                </ng-template>
+                <ng-template tableBody let-data>
+                    <td class="row" *ngFor="let col of columns">
+                        {{data[col]}}
+                    </td>
+                </ng-template>
+            </app-table>
+        </app-card>
+        <app-card title="recent order" class="dashboard__tables__new-users">
+            <app-table [columns]="columns" [data]="data">
+                <ng-template tableHeader let-columns>
+                    <td *ngFor="let col of columns">
+                        {{ col }}
+                    </td>
+                </ng-template>
+                <ng-template tableBody let-data>
+                    <td class="row" *ngFor="let col of columns">
+                        {{data[col]}}
+                    </td>
+                </ng-template>
+            </app-table>
+        </app-card>
     </div>
 </section>
