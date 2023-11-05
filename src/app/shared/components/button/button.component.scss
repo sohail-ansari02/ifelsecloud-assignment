@@ -1,0 +1,19 @@
+@use "functions" as *;
+
+:host {
+  display: block;
+  background-color: var(--secondary);
+  color: var(--primary);
+  width: max-content;
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: toRem(12);
+}
+.btn{
+  font-size: inherit;
+  padding: toRem(9) toRem(12);
+  background-color: inherit;
+  color: inherit;
+  display: inline-block;
+
+}

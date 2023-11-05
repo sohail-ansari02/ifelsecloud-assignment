@@ -1,0 +1,18 @@
+@use "functions" as *;
+
+:host {
+  display: block;
+  background-color: var(--primary);
+  color: var(--black);
+  width: max-content;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.chip{
+  font-size: toRem(12);
+  padding: toRem(6) toRem(12);
+  background-color: inherit;
+  color: inherit;
+  display: inline-block;
+
+}

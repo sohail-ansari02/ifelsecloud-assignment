@@ -7,6 +7,9 @@ import { BadgeComponent } from './components/inputs/badge/badge.component';
 import { CardComponent } from './components/card/card.component';
 import { TableBodyDirective, TableComponent, TableHeaderDirective } from './components/table/table.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { ChipComponent } from './components/chip/chip.component';
+import { ButtonComponent } from './components/button/button.component';
+import { ProgressComponent } from './components/progress/progress.component';
 
 
 
@@ -18,6 +21,9 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     TableComponent,
     TableHeaderDirective,
     TableBodyDirective,
+    ChipComponent,
+    ButtonComponent,
+    ProgressComponent,
   ],
   imports: [
     CommonModule,
@@ -31,7 +37,10 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     TableComponent,
     TableHeaderDirective,
     TableBodyDirective,
-    NgApexchartsModule
+    NgApexchartsModule,
+    ChipComponent,
+    ButtonComponent,
+    ProgressComponent
   ]
 })
 export class SharedModule { }
