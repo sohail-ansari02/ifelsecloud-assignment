@@ -1,3 +1,26 @@
+<app-dialog *ngIf="showDialouge" (onClose)="toggleDialoge()">
+    <table class="dialog-data">
+        <tr *ngFor="let col of columns">
+            <td>{{col.name | titlecase}}</td>
+            <ng-container [ngSwitch]="col.name">
+                <ng-container *ngSwitchCase="'delivery date'">
+                    {{selectedRow[ col.field] | date: 'dd MMM, y'}}
+                </ng-container>
+                <ng-container *ngSwitchCase="'status'">
+                    <app-chip [class]="selectedRow[ col.field]">
+                        {{selectedRow[ col.field] }}
+                    </app-chip>
+                </ng-container>
+                <ng-container *ngSwitchCase="'tracking no#'">
+                    <td> #{{ selectedRow[col.field]}}</td>
+                </ng-container>
+                <ng-container *ngSwitchDefault>
+                    <td>{{ selectedRow[col.field]}}</td>
+                </ng-container>
+            </ng-container>
+        </tr>
+    </table>
+</app-dialog>
 <app-card class="recent-order" title="recent order">
     <app-table [columns]="columns" [data]="recentOrder" [showIndex]="true">
         <ng-template tableHeader let-columns>
@@ -10,7 +33,7 @@
         </ng-template>
         <ng-template tableBody let-data>
             <ng-container *ngFor="let col of columns; let last = last">
-                <td class="row"  [align]="col?.align ?? 'left'">
+                <td class="row" [align]="col?.align ?? 'left'">
                     <ng-container>
                         <ng-container [ngSwitch]="col.name">
                             <ng-container *ngSwitchCase="'status'">
@@ -30,7 +53,7 @@
                                 {{data[ col.field] ? 'Yes' : 'No' }}
                             </ng-container>
                             <ng-container *ngSwitchCase="'action'">
-                                <app-button class="detail-btn">
+                                <app-button (click)="toggleDialoge(data)" class="detail-btn">
                                     <fa-icon [icon]="faX"></fa-icon>
                                 </app-button>
                             </ng-container>

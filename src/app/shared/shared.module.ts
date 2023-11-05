@@ -11,7 +11,7 @@ import { ChipComponent } from './components/chip/chip.component';
 import { ButtonComponent } from './components/button/button.component';
 import { ProgressComponent } from './components/progress/progress.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DialougeComponent } from './components/dialouge/dialouge.component'
+import { DialogComponent } from './components/dialog/dialog.component'
 
 
 
@@ -26,7 +26,7 @@ import { DialougeComponent } from './components/dialouge/dialouge.component'
     ChipComponent,
     ButtonComponent,
     ProgressComponent,
-    DialougeComponent,
+    DialogComponent,
   ],
   imports: [
     CommonModule,
@@ -45,7 +45,7 @@ import { DialougeComponent } from './components/dialouge/dialouge.component'
     ChipComponent,
     ButtonComponent,
     ProgressComponent,
-    DialougeComponent
+    DialogComponent
   ]
 })
 export class SharedModule { }

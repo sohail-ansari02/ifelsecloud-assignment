@@ -1,0 +1,40 @@
+@use "functions" as *;
+
+:host {
+  display: block;
+}
+
+.dialog{
+
+  &__wrapper{
+    backdrop-filter: blur(6px) brightness(.5) ;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    height: 100vh;
+    z-index: 100;
+    transition: .34s ease-in;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  background-color: var(--primary);
+  padding: toRem(20) toRem(28);
+  max-width: 60%;
+  min-height: 30%;
+  display: block flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  gap: toRem(18);
+  margin: auto;
+  border-radius: 10px;
+  color: var(--black);
+
+  &__container{
+  }
+  &__footer{
+    display: flex;
+    justify-content: end;
+  }
+
+}

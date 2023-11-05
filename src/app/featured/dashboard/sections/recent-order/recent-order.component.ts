@@ -11,6 +11,8 @@ import { faX } from '@fortawesome/free-solid-svg-icons';
 export class RecentOrderComponent {
   @Input() recentOrder: RecentOrder[] = [];
   faX = faX;
+  showDialouge: boolean = false;
+  selectedRow: any;
   
   columns: TableColumn[] = [
     {
@@ -44,6 +46,13 @@ export class RecentOrderComponent {
       name: 'action',
       field: ''
     }
-  ]
+  ];
+
+  toggleDialoge(data: RecentOrder | undefined = undefined): void{
+    this.showDialouge = !this.showDialouge;
+    if(data){
+      this.selectedRow = data;
+    }
+  }
 
 }

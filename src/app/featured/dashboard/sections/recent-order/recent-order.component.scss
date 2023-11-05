@@ -1,3 +1,5 @@
+@use "functions" as *;
+
 :host {
   display: block;
 }
@@ -30,5 +32,11 @@
 
 }
 
-.recent-order{
+.dialog-data{
+  td{
+    padding-inline: toRem(8);
+  }
+  td:first-child{
+    font-weight: 600;
+  }
 }

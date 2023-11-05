@@ -1,0 +1,10 @@
+<div class="dialog__wrapper">
+    <dialog class="dialog">
+        <div class="dialog__container">
+            <ng-content></ng-content>
+        </div>
+        <div class="dialog__footer">
+            <app-button (click)="onClose.emit()">Dismiss</app-button>
+        </div>
+    </dialog>
+</div>

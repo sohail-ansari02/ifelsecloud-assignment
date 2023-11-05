@@ -1,4 +1,3 @@
-<app-dialouge></app-dialouge>
 <section class="dashboard">
     <div *ngIf="dashboardData?.top_cards" class="dashboard__cards">
         <app-feature-card *ngFor="let card of dashboardData.top_cards; let first = first" [data]="card"
@@ -6,8 +5,8 @@
     </div>
 
     <div class="dashboard__tables">
-        <app-recent-order [recentOrder]="dashboardData.recent_orders" class="dashboard__tables__recent-order" />
-        <app-new-user-registration [newUsers]="dashboardData.new_users" class="dashboard__tables__new-users" />
+        <app-recent-order [recentOrder]="dashboardData?.recent_orders ?? []" class="dashboard__tables__recent-order" />
+        <app-new-user-registration [newUsers]="dashboardData?.new_users ?? []" class="dashboard__tables__new-users" />
     </div>
     <div class="dashboard__charts">
         <app-card class="dashboard__charts__sales">
