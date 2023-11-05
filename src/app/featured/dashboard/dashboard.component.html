@@ -46,9 +46,12 @@
         </app-card>
         <app-card class="dashboard__charts__balance">
             <apx-chart [series]="CHARTS_OPTION.balanceChart.series" [chart]="CHARTS_OPTION.balanceChart.chart"
-                [plotOptions]="CHARTS_OPTION.plotOptions" [xaxis]="CHARTS_OPTION.balanceChart.xaxis"
+                [plotOptions]="CHARTS_OPTION.balanceChart.plotOptions" [xaxis]="CHARTS_OPTION.balanceChart.xaxis"
                 [title]="CHARTS_OPTION.balanceChart.title" [yaxis]="CHARTS_OPTION.balanceChart.yaxis"
-                [stroke]="CHARTS_OPTION.balanceChart.stroke" [legend]="CHARTS_OPTION.balanceChart.legend"></apx-chart>
+                [stroke]="CHARTS_OPTION.balanceChart.stroke" [legend]="CHARTS_OPTION.balanceChart.legend"
+                [yaxis]="CHARTS_OPTION.balanceChart.yaxis"
+                [dataLabels]="CHARTS_OPTION.balanceChart.dataLabels"
+                ></apx-chart>
         </app-card>
         <app-card class="dashboard__charts__products">
             <apx-chart [series]="CHARTS_OPTION.donucChart.series" [chart]="CHARTS_OPTION.donucChart.chart"

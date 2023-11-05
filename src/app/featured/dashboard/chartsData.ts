@@ -1,5 +1,5 @@
 import { ApexPlotOptions, ApexOptions } from "ng-apexcharts";
-type chartOptions = ApexPlotOptions | ApexOptions
+type chartOptions = ApexPlotOptions | ApexOptions 
 export const salesChart: chartOptions = {
   series: [
     {
@@ -97,16 +97,31 @@ export const balanceChart: chartOptions = {
     bar: {
       horizontal: false,
       columnWidth: 8,
-      borderRadiusApplication: 'around',
-
+      borderRadius: 0,
+      dataLabels: {
+      }
     }
   },
   xaxis: {
     type: "category",
     categories: [
-      "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-    ]
+      "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul" ,"Aug", "Sep", "Oct", "Nov", "Dec"
+    ],
+    labels: {
+      style: {
+        fontSize: '12px' // Set label font size for x-axis
+      }
+    }
   },
+  yaxis: [
+    {
+      labels: {
+        style: {
+          fontSize: '12px' // Set label font size for y-axis
+        }
+      }
+    }
+  ],
   legend: {
     position: "top",
     offsetY: -34,
@@ -118,6 +133,9 @@ export const balanceChart: chartOptions = {
   },
   stroke: {
     width: 8
+  },
+  dataLabels: {
+    enabled: false,
   }
 }
 

@@ -58,7 +58,7 @@
         }
 
         ::ng-deep {
-            text {
+            .apexcharts-title-text {
                 font-size: toRem(16);
                 font-weight: 600;
                 color: var(--black);
