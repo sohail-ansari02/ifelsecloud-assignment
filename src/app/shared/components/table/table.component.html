@@ -8,9 +8,8 @@
         <tbody>
             <tr *ngFor="let row of data; index as i">
                 <td>{{i}}</td>
-                <ng-container *ngTemplateOutlet="body.template; context: { $implicit: { rowData: row, index: i, columns: columns } }">
+                <ng-container *ngTemplateOutlet="body.template; context: { $implicit: row }">
                 </ng-container>
             </tr>
         </tbody>
-
 </table>

@@ -22,6 +22,6 @@ export class TableComponent implements AfterContentInit {
   @ContentChild(TableBodyDirective) public body!: TableBodyDirective;
   
   ngAfterContentInit(): void {
-    console.log('table',this.header)
+    console.log('table',this.body)
   }
 }

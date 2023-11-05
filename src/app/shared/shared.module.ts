@@ -5,7 +5,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SelectComponent } from './components/inputs/select/select.component';
 import { BadgeComponent } from './components/inputs/badge/badge.component';
 import { CardComponent } from './components/card/card.component';
-import { TableComponent } from './components/table/table.component';
+import { TableBodyDirective, TableComponent, TableHeaderDirective } from './components/table/table.component';
 
 
 
@@ -14,12 +14,13 @@ import { TableComponent } from './components/table/table.component';
     SelectComponent,
     BadgeComponent,
     CardComponent,
-    TableComponent
+    TableComponent,
+    TableHeaderDirective,
+    TableBodyDirective,
   ],
   imports: [
     CommonModule,
-    FontAwesomeModule
-  ],
+    FontAwesomeModule,],
   exports: [
     RouterModule,
     FontAwesomeModule,
@@ -27,6 +28,8 @@ import { TableComponent } from './components/table/table.component';
     BadgeComponent,
     CardComponent,
     TableComponent,
+    TableHeaderDirective,
+    TableBodyDirective,
   ]
 })
 export class SharedModule { }
