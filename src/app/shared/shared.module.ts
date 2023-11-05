@@ -10,6 +10,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { ChipComponent } from './components/chip/chip.component';
 import { ButtonComponent } from './components/button/button.component';
 import { ProgressComponent } from './components/progress/progress.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 
@@ -30,6 +31,7 @@ import { ProgressComponent } from './components/progress/progress.component';
     FontAwesomeModule,],
   exports: [
     RouterModule,
+    HttpClientModule,
     FontAwesomeModule,
     SelectComponent,
     BadgeComponent,
