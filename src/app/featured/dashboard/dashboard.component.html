@@ -7,15 +7,11 @@
 <app-progress></app-progress>
 
 <section class="dashboard">
-
-
-
-    <div class="dashboard__cards">
-        <app-feature-card [special]="true" class="dashboard__cards__card"></app-feature-card>
-        <app-feature-card class="dashboard__cards__card"></app-feature-card>
-        <app-feature-card class="dashboard__cards__card"></app-feature-card>
-        <app-feature-card class="dashboard__cards__card"></app-feature-card>
+    <div *ngIf="dashboardData?.top_cards" class="dashboard__cards">
+        <app-feature-card *ngFor="let card of dashboardData.top_cards; let first = first" [data]="card"
+            [special]="first" class="dashboard__cards__card"></app-feature-card>
     </div>
+
     <div class="dashboard__tables">
         <app-recent-order class="dashboard__tables__recent-order" />
         <app-new-user-registration class="dashboard__tables__new-users" />

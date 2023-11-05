@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { faMusic } from '@fortawesome/free-solid-svg-icons';
+import { FeatureCard } from '../../interfaces/feature-card';
 
 @Component({
   selector: 'app-feature-card',
@@ -8,6 +9,8 @@ import { faMusic } from '@fortawesome/free-solid-svg-icons';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FeatureCardComponent {
+  
+  @Input() data!: FeatureCard;
   @Input() special: boolean = false;
   faMusic = faMusic;
 

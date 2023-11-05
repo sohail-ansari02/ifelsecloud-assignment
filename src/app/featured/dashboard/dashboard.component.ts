@@ -5,9 +5,10 @@ import {
 } from "ng-apexcharts";
 import { DashboardService } from './services/dashboard.service';
 import { Dashboard } from './interfaces/dashboard';
-import { Subscription } from 'rxjs/internal/Subscription';
 import { takeUntil } from 'rxjs/internal/operators/takeUntil';
 import { Subject } from 'rxjs/internal/Subject';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { faMusic, faCircle, faDownload, faArrowsRotate } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -24,8 +25,11 @@ export class DashboardComponent implements OnInit, OnDestroy {
     salesChart,
     balanceChart, donucChart
   }
+  ICONS: IconProp[] = [faMusic, faCircle, faDownload, faArrowsRotate
+  ];
+
   dashboardData!: Dashboard;
-  
+
   constructor(private ds: DashboardService) { }
   ngOnInit(): void {
     this.initDashboardData();
@@ -39,7 +43,18 @@ export class DashboardComponent implements OnInit, OnDestroy {
   initDashboardData(): void {
     this.ds.getAllDashboardData().pipe(
       takeUntil(this._onDestroy)
-    ).subscribe(res => this.dashboardData = res);
+    )
+      .subscribe(res => {
+
+        res.top_cards = (res?.top_cards ?? []).map((card, _index) => {
+          return {
+            ...card,
+            icon: this.ICONS[_index % this.ICONS.length],
+          }
+        });
+
+        this.dashboardData = res;
+      });
   }
 
 

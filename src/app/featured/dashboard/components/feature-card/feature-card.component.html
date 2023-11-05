@@ -3,10 +3,14 @@
 }">
     <article class="card">
         <div class="card__info">
-            <span class="card__info__stats">40%</span>
-            <h2 class="card__info__heading">Saving for home plane</h2>
-            <p class="card__info__sub-heading">Lorem ipsum dolor sit amet.</p>
+            <span class="card__info__stats">{{data.value}}%</span>
+            <h2 class="card__info__heading">
+                {{data.header}}
+            </h2>
+            <p class="card__info__sub-heading">
+                {{data.sub_header}}
+            </p>
         </div>
-        <fa-icon class="card__icon" [icon]="faMusic" [size]="'2x'"></fa-icon>
+        <fa-icon class="card__icon" [icon]="data.icon" [size]="'2x'"></fa-icon>
     </article>
 </app-card>
