@@ -1,10 +1,5 @@
 <app-card title="New User Registrations">
     <app-table [columns]="columns" [data]="newUsers">
-        <!-- <ng-template tableHeader let-columns>
-            <td *ngFor="let col of columns">
-                {{ col.name }}
-            </td>
-        </ng-template> -->
         <ng-template tableBody let-data>
             <td class="row" *ngFor="let col of columns; let last = last">
                 <ng-container>
