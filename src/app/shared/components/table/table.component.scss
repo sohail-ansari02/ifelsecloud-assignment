@@ -14,10 +14,12 @@
   td {
     @extend .border;
     padding-block: toRem(10);
+    color: var(--grey);
   }
   
   & thead td {
     font-weight: 600;
+    color: var(--black);
   }
 
 }

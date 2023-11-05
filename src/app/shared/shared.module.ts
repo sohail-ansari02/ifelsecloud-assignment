@@ -6,6 +6,7 @@ import { SelectComponent } from './components/inputs/select/select.component';
 import { BadgeComponent } from './components/inputs/badge/badge.component';
 import { CardComponent } from './components/card/card.component';
 import { TableBodyDirective, TableComponent, TableHeaderDirective } from './components/table/table.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 
 
@@ -30,6 +31,7 @@ import { TableBodyDirective, TableComponent, TableHeaderDirective } from './comp
     TableComponent,
     TableHeaderDirective,
     TableBodyDirective,
+    NgApexchartsModule
   ]
 })
 export class SharedModule { }

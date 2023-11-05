@@ -39,8 +39,13 @@
         </app-card>
     </div>
     <div class="dashboard__charts">
-        <app-card class="dashboard__charts__sales" title="sales statistics">
-        </app-card>
+        <app-card class="dashboard__charts__sales" >
+            <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [xaxis]="chartOptions.xaxis"
+            [title]="chartOptions.title"
+          ></apx-chart>        </app-card>
         <app-card class="dashboard__charts__balance" title="balance overview">
         </app-card>
         <app-card class="dashboard__charts__products" title="top products">

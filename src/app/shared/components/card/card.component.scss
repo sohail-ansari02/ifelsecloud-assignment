@@ -3,11 +3,10 @@
 :host {
   display: block;
   background-color: var(--primary);
-  
+  padding: toRem(30) toRem(30) toRem(27);
 }
 
 .card{
-  padding: toRem(30) toRem(30) toRem(27);
   border-radius: 3px;
   background-color: inherit;
   &__title{
@@ -15,6 +14,7 @@
     font-weight: 600;
     text-transform: capitalize;
     margin-block-end: toRem(24);
+    color: var(--black);
   }
 
 }

@@ -7,7 +7,7 @@
 .dashboard {
     $gap: toRem(24);
     width: 100%;
-    // display: flex;
+    display: flex;
     flex-direction: column;
     gap: toRem(26);
 
@@ -27,22 +27,43 @@
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         gap: $gap;
-        
+
         &__recent-order {
             grid-column: span 8;
         }
-        
+
         &__new-users {
             grid-column: span 4;
-            
+
         }
 
     }
 
-    &__charts{
+    &__charts {
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(11, 1fr);
         gap: $gap;
+
+        &>* {
+            padding-block-start: toRem(11);
+        }
+
+        &__sales,
+        &__balance {
+            grid-column: span 4;
+        }
+
+        &__products {
+            grid-column: span 3;
+        }
+
+        ::ng-deep {
+            text {
+                font-size: toRem(16);
+                font-weight: 600;
+                color: var(--black);
+            }
+        }
 
     }
 }
