@@ -143,7 +143,7 @@ export const donucChart: chartOptions = {
   series: [44, 55, 13,],
   chart: {
     type: "donut",
-    width: 220,  // Set the width to control the diameter
+    // width: 220,  // Set the width to control the diameter
     height: 270, // Set the height to control the diameter
   },
   labels: ["Men", "Electronic", "Women",],
@@ -171,7 +171,7 @@ export const donucChart: chartOptions = {
     markers: {
       fillColors: ["#506de2", "#7386d0", "#8e99c1"]
     },
-    width: 220
+    // width: '100%'
   },
   plotOptions: {
   },
