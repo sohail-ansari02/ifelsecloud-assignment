@@ -1,7 +1,7 @@
 # IfElseAssignment
 
 ## Project Output
-![Porject Outpit](./project-output.png)
+![Porject Outpit](./`project-output.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
 
