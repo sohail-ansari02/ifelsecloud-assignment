@@ -14,6 +14,9 @@
                 <ng-container *ngSwitchCase="'tracking no#'">
                     <td> #{{ selectedRow[col.field]}}</td>
                 </ng-container>
+                <ng-container *ngSwitchCase="'action'">
+                    <td></td>
+                </ng-container>
                 <ng-container *ngSwitchDefault>
                     <td>{{ selectedRow[col.field]}}</td>
                 </ng-container>
