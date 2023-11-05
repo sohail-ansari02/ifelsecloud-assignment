@@ -11,7 +11,7 @@
 }
 
 :root {
-    --backgroud: hsl(217.5deg 57.14% 97.25%);
+    font-size: clamp(0.75rem, 0.3214rem + 0.6696vw, 1.125rem);    --backgroud: hsl(217.5deg 57.14% 97.25%);
     --primary: hsl(0deg 0% 100%);
     --secondary: hsl(228.08deg 71.57% 60%);
     --black: hsl(220, 8%, 15%);
@@ -29,7 +29,8 @@ input::placeholder {
 fa-icon {
     color: var(--grey);
 }
-body{
+
+body {
     background-color: var(--backgroud);
     overflow: hidden;
 }
@@ -39,17 +40,21 @@ body{
     width: 6px;
     height: 6px;
 }
+
 *::-webkit-scrollbar-track {
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.1);
 }
+
 *::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.2);
 }
+
 *::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.4);
 }
+
 *::-webkit-scrollbar-thumb:active {
     background: rgba(0, 0, 0, 0.9);
 }

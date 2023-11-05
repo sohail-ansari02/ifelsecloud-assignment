@@ -8,11 +8,15 @@
                             <div class="profile">
                                 <picture class="profile__picture">
                                     <img src="{{data.picture}}" alt="{{data.name}}" class="profile__picture__image">
-                                    <div class="profile__picture__image"></div>
+                                    <div class="profile__picture__status"
+                                    [ngClass]="{
+                                        'profile__picture__status--active': !!data.isActive
+                                    }"
+                                    ></div>
                                 </picture>
                                 <div class="profile__info">
                                     <span class="profile__info__name">
-                                        {{data.name}}
+                                        {{data.name}} 
                                     </span>
                                     <span class="profile__info__location">
                                         {{data.country}}
@@ -24,7 +28,7 @@
                             <app-progress [value]="data[col.field]"></app-progress>
                         </ng-container>
                         <ng-container *ngSwitchCase="'action'">
-                            <app-button class="detail-btn">
+                            <app-button class="detail-btn" [disabled]="data.progress < 60">
                                 More
                             </app-button>
                         </ng-container>

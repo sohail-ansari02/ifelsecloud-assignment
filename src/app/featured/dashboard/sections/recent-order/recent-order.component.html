@@ -10,9 +10,11 @@
                 <ng-container>
                     <ng-container [ngSwitch]="col.name">
                         <ng-container *ngSwitchCase="'status'">
-                            <app-chip [class]="data[ col.field]">
-                                {{data[ col.field] }}
-                            </app-chip>
+                            <div class="chip__wrapper">
+                                <app-chip [class]="data[ col.field]">
+                                    {{data[ col.field] }}
+                                </app-chip>
+                            </div>
                         </ng-container>
                         <ng-container *ngSwitchCase="'delivery date'">
                             {{data[ col.field] | date: 'dd MMM, y'}}

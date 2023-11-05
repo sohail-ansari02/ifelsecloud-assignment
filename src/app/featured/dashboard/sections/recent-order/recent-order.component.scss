@@ -8,6 +8,11 @@
 }
 .chip{
   color: var(--primary);
+  display: inline;
+  &__wrapper{
+    display: inline;
+    text-align: center;
+  }
 }
 .Pending {
   @extend .chip;

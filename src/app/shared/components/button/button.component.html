@@ -1,5 +1,3 @@
-<button class="btn"
-[ngClass]="{disabled: disabled}"
->
+<button class="btn" [ngClass]="{disabled: disabled}" [disabled]="disabled" [type]="type">
     <ng-content></ng-content>
 </button>
