@@ -3,6 +3,8 @@
 :host {
   display: block;
   width: auto;
+  max-height: toRem(276);
+  overflow: auto;
 }
 
 .border {
@@ -11,15 +13,22 @@
 
 :host ::ng-deep .table {
   width: 100%;
+
   td {
     @extend .border;
     padding-block: toRem(10);
     color: var(--grey);
   }
-  
-  & thead td {
-    font-weight: 600;
-    color: var(--black);
+
+  & thead {
+    position: sticky;
+    top: 0;
+    background-color: var(--primary);
+    td {
+      font-weight: 600;
+      color: var(--black);
+    }
+
   }
 
 }

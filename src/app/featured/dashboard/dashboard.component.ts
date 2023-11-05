@@ -25,6 +25,15 @@ export class DashboardComponent {
     { Name: 'John', Age: 30, Country: 'USA' },
     { Name: 'Alice', Age: 25, Country: 'Canada' },
     { Name: 'Bob', Age: 35, Country: 'UK' },
+    { Name: 'John', Age: 30, Country: 'USA' },
+    { Name: 'Alice', Age: 25, Country: 'Canada' },
+    { Name: 'Bob', Age: 35, Country: 'UK' },
+    { Name: 'John', Age: 30, Country: 'USA' },
+    { Name: 'Alice', Age: 25, Country: 'Canada' },
+    { Name: 'Bob', Age: 35, Country: 'UK' },
+    { Name: 'John', Age: 30, Country: 'USA' },
+    { Name: 'Alice', Age: 25, Country: 'Canada' },
+    { Name: 'Bob', Age: 35, Country: 'UK' },
   ];
   CHARTS_OPTION: any = {
     salesChart,
