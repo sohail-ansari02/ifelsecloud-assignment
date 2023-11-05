@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ContentChild, Directive, Input, TemplateRef, AfterContentInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ContentChild, Directive, Input, TemplateRef } from '@angular/core';
 
 @Directive({ selector: '[tableHeader]' })
 export class TableHeaderDirective {
@@ -15,14 +15,12 @@ export class TableBodyDirective {
   styleUrls: ['./table.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TableComponent implements AfterContentInit {
+export class TableComponent {
   @Input() columns: any[] = [];
   @Input() data: any[] = [];
   @Input() showIndex: boolean = false;
   @ContentChild(TableHeaderDirective) public header!: TableHeaderDirective;
   @ContentChild(TableBodyDirective) public body!: TableBodyDirective;
   
-  ngAfterContentInit(): void {
-    console.log('table',this.body)
-  }
+
 }
