@@ -1,4 +1,4 @@
-<app-card title="New User Registrations">
+<app-card class="new-user" title="New User Registrations">
     <app-table [columns]="columns" [data]="newUsers">
         <ng-template tableBody let-data>
             <td class="row" *ngFor="let col of columns; let last = last">
@@ -8,24 +8,23 @@
                             <div class="profile">
                                 <picture class="profile__picture">
                                     <img src="{{data.picture}}" alt="{{data.name}}" class="profile__picture__image">
-                                    <div class="profile__picture__status"
-                                    [ngClass]="{
+                                    <div class="profile__picture__status" [ngClass]="{
                                         'profile__picture__status--active': !!data.isActive
-                                    }"
-                                    
-                                    ></div>
-                                    
+                                    }"></div>
+
                                 </picture>
                                 <div class="profile__info">
                                     <span class="profile__info__name">
-                                        {{data.name}} 
+                                        {{data.name}}
                                     </span>
                                     <span class="profile__info__location">
                                         {{data.country}}
                                     </span>
                                 </div>
-                                <app-progress class="profile__progress" [value]="data.progress"></app-progress>
                             </div>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'progress'">
+                            <app-progress class="profile__progress" [value]="data.progress"></app-progress>
                         </ng-container>
                         <ng-container *ngSwitchCase="'action'">
                             <app-button class="detail-btn" [disabled]="data.progress < 60">

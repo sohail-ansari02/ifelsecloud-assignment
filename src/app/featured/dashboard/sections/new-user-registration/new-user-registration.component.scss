@@ -3,23 +3,29 @@
 :host {
   display: block;
 }
-.profile{
+
+
+
+.profile {
   display: inline flex;
   gap: toRem(8);
   max-width: toRem(150);
-  &__picture{
+
+  &__picture {
     align-self: self-start;
     position: relative;
     width: toRem(38);
     height: auto;
     aspect-ratio: 1;
-    &__image{
+
+    &__image {
       width: toRem(38);
       object-fit: cover;
       border-radius: 50%;
       display: block;
     }
-    &__status{
+
+    &__status {
       width: toRem(10);
       height: auto;
       aspect-ratio: 1;
@@ -29,29 +35,56 @@
       bottom: 0;
       right: 0;
       border-radius: 50%;
-      &--active{
+
+      &--active {
         background-color: var(--green);
       }
     }
   }
-  &__info{
+
+  &__info {
     display: flex;
     flex-direction: column;
     gap: toRem(8);
     min-width: toRem(90);
-    &__name{
+
+    &__name {
       font-size: toRem(14);
       line-height: 1;
       color: var(--black);
       text-transform: capitalize;
     }
-    &__location{
+
+    &__location {
       font-size: toRem(12);
       line-height: 1;
       color: var(--grey);
       text-transform: capitalize;
     }
   }
-  &__progress{}
 
+  &__progress {}
+
+}
+
+:host ::ng-deep {
+  .table {
+
+    tr>td {
+
+      &:first-child {
+        width: 25% !important;
+      }
+
+      &:last-child {
+        text-align: center;
+      }
+
+      &:nth-child(2) {
+        width: 46%;
+      }
+
+
+    }
+  }
 }
