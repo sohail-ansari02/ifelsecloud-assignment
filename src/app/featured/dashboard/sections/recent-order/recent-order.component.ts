@@ -21,7 +21,7 @@ export class RecentOrderComponent {
     },
     {
       name: 'product',
-      field: 'name'
+      field: 'product'
     },
     {
       name: 'delivery date',
