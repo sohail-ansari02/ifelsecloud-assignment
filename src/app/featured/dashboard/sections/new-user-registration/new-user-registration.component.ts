@@ -15,10 +15,10 @@ export class NewUserRegistrationComponent {
       name: 'user',
       field: ''
     },
-    {
-      name: 'progress',
-      field: 'progress'
-    },
+    // {
+    //   name: 'progress',
+    //   field: 'progress'
+    // },
     {
       name: 'action',
       field: ''

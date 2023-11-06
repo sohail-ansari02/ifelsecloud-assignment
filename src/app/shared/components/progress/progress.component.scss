@@ -2,9 +2,11 @@
 
 :host {
   display: block;
-  min-width: toRem(126);
   max-width: toRem(295);
   width: 100%;
+  max-width: none;
+  min-width: -webkit-fill-available;
+  flex-grow: 1;
 }
 
 .progress {

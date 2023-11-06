@@ -4,7 +4,7 @@
   display: block;
 }
 .profile{
-  display: flex;
+  display: inline flex;
   gap: toRem(8);
   max-width: toRem(150);
   &__picture{
@@ -38,6 +38,7 @@
     display: flex;
     flex-direction: column;
     gap: toRem(8);
+    min-width: toRem(90);
     &__name{
       font-size: toRem(14);
       line-height: 1;
@@ -51,5 +52,6 @@
       text-transform: capitalize;
     }
   }
+  &__progress{}
 
 }
