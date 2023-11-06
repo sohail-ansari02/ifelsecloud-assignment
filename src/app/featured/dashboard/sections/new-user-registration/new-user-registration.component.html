@@ -12,7 +12,9 @@
                                     [ngClass]="{
                                         'profile__picture__status--active': !!data.isActive
                                     }"
+                                    
                                     ></div>
+                                    
                                 </picture>
                                 <div class="profile__info">
                                     <span class="profile__info__name">
@@ -22,10 +24,8 @@
                                         {{data.country}}
                                     </span>
                                 </div>
+                                <app-progress class="profile__progress" [value]="data.progress"></app-progress>
                             </div>
-                        </ng-container>
-                        <ng-container *ngSwitchCase="'progress'">
-                            <app-progress [value]="data[col.field]"></app-progress>
                         </ng-container>
                         <ng-container *ngSwitchCase="'action'">
                             <app-button class="detail-btn" [disabled]="data.progress < 60">
