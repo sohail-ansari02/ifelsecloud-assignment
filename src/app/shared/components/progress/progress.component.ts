@@ -8,7 +8,7 @@ import {  Component, Input,  } from '@angular/core';
 export class ProgressComponent  {
   @Input(
     {
-      transform: (value: number | string) => parseInt(<string>value)*0.01
+      transform: (value: number | string) => parseInt(<string>value)
     }
   ) value: number = 0;
 

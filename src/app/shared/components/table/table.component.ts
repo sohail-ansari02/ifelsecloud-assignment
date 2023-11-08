@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, ContentChild, Directive, Input, TemplateRef } from '@angular/core';
+import { TableColumn } from '../../interface/table-column';
 
 @Directive({ selector: '[tableHeader]' })
 export class TableHeaderDirective {
@@ -16,7 +17,7 @@ export class TableBodyDirective {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableComponent {
-  @Input() columns: any[] = [];
+  @Input() columns: TableColumn[] = [];
   @Input() data: any[] = [];
   @Input() showIndex: boolean = false;
   @ContentChild(TableHeaderDirective) public header!: TableHeaderDirective;

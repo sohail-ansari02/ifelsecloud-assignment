@@ -1,16 +1,16 @@
 <div class="progress">
     <span class="progress__bar" [ngStyle]="
     {
-        width: value*100 + '%'
+        width: value + '%'
     }"
     [ngClass]="{
-        'one': value > .2 || value <= .2,
-        'two': value > .3,
-        'three': value > .4,
-        'four': value > .5,
-        'five': value >=.6,
+        'one': value > 20 || value <= 20,
+        'two': value > 30,
+        'three': value > 40,
+        'four': value > 50,
+        'five': value >=60,
     }"
     
     ></span>
-    <span class="progress__value">{{value*100}}%</span>
+    <span class="progress__value">{{value}}%</span>
 </div>
